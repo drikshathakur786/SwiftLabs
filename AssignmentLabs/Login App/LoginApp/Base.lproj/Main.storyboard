@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3E-Wk-VeI">
-                                <rect key="frame" x="121" y="310" width="147" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nlB-zx-hDd">
                                 <rect key="frame" x="121" y="392" width="147" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -62,7 +56,6 @@
                     <navigationItem key="navigationItem" id="f7o-BR-IeV"/>
                     <connections>
                         <outlet property="passwordButton" destination="pDj-m6-2Rr" id="zK1-dF-wlh"/>
-                        <outlet property="unameField" destination="N3E-Wk-VeI" id="HMi-6e-K1T"/>
                         <outlet property="userNameButton" destination="u8e-XV-D2o" id="GMv-gG-lZa"/>
                         <segue destination="XKH-QP-xDJ" kind="show" identifier="vcSegue" id="r1w-dU-zXi"/>
                     </connections>
@@ -93,7 +86,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X3P-ZO-pjk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="8b8-pL-2nr">
-                        <rect key="frame" x="0.0" y="118" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="117.99999999999999" width="393" height="96.666666666666643"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
