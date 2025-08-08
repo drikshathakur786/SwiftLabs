@@ -1,5 +1,11 @@
 // 6 aug, 2025
 
+// PROTOCOLS are set of rules
+//  you want whosoever adopt your method that should follow those rules
+
+// what does a confirming protocol means - when u follow all the rules eg for customstringconvertible you add description u are confirming
+// what does a adoptiong protocol means- whenever u write with colon you are adopting a protocol
+
 // CustomStringConvertible - wherever we want to debug something it makes debugging easier
 class  Shoe: CustomStringConvertible {
     let color: String
@@ -213,5 +219,45 @@ if (myBooks1 == myBooks2){
 }
 
 //protocols as interfaces. implements
+
+
+
+/*
+ 
+PROBLEM STATEMENT: version tracker protocol challenge
+ you are building a version tracker for a software product. a version number consists of a major and a minor int value nd should report
+ - print a user friendly version string
+ - comparing versions to determine which one is newer
+ - sorting a collection of versions
+
+*/
+
+struct Version: CustomStringConvertible, Equatable, Comparable { // adopting protocol
+    var major: Int
+    var minor: Int
+    
+    var description: String { // confirming CustomStringConvertible protocol
+        return "\(major) \(minor)"
+    }
+    
+    static func == (lhs: Version, rhs: Version) -> Bool { // confirming Equatable protocol
+        return lhs.major == rhs.major && lhs.minor == rhs.minor
+    }
+    
+    static func < (lhs: Version, rhs: Version) -> Bool { // confirming Comparable protocol
+        if lhs.major != rhs.major {
+            return lhs.major < rhs.major
+        } else {
+            return lhs.minor < rhs.minor
+        }
+    }
+    
+}
+
+let v1 = Version(major: 1, minor: 4)
+let v2 = Version(major: 1, minor: 5)
+print(v1 < v2)
+print(v1 == v2)
+print(v2.description)
 
 
